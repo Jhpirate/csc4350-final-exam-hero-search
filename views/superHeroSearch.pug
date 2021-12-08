@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        title Super Hero Search
+        link(rel='stylesheet', href='/css/style.css')
+    body
+        h1.title Title: Super Hero Search
+        br
+        form(action='/super', method='post')
+            label(for='heroAge') Age:
+            input(type='text', name='heroAge', id="heroAge", placeholder='Enter the Hero Age')
+            br
+            input(type='submit', value='Search Superheros')

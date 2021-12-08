@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title Super Hero Search Results
+        link(rel='stylesheet', href='/css/style.css')
+    body
+        h1.title Super Hero Search Results for: #{searchedAge}
+        table(style='width:100%')
+            thead
+                tr
+                    th ID
+                    th Name
+                    th Age
+                    th Race
+                    th Strengths
+                    th Weknesses
+            tbody
+                for item in heroResults
+                    tr
+                        td #{item.id}
+                        td #{item.name}
+                        td #{item.age}
+                        td #{item.race}
+                        td #{item.strengths}
+                        td #{item.weakness}
+            tfoot
+                tr
+                    td(colspan=6, align="center") AU CSC4350 | Final Exam | Node JS
+
+        br
+        form(action='/', method='get')
+            input(type='submit', value='Back to Search')
+
